@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website - Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('service_meoge19'); // Replace with your EmailJS user ID
+        })();
+    </script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <h1 class="logo">Appithub</h1>
+        <nav class="navbar">
+            <button class="nav-close-btn">&times;</button>
+            <ul class="navbar-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#callback">Request Callback</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <button class="nav-open-btn">Menu</button>
+    </div>
+    <div class="overlay"></div>
+</header>
+
+<section id="callback" class="section">
+    <div class="container">
+        <h2 class="section-title">Request Callback</h2>
+        <div class="service-form">
+            <form id="callbackForm" onsubmit="sendEmail(event)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Select Service</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="Website Creation">Website Creation</option>
+                        <option value="SEO Management">SEO Management</option>
+                        <option value="App Development">App Development</option>
+                        <option value="Store Management">Store Management</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="service section">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="grid-list">
+            <div class="service-card">
+                <div class="card-icon">
+                    <span class="service-icon">1</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Website Creation</h3>
+                    <p class="card-text">Professional website creation services to help you build your online presence.</p>
+                    <button class="btn btn-primary" onclick="selectService('Website Creation')">Request Callback</button>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="card-icon">
+                    <span class="service-icon">2</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">SEO Management</h3>
+                    <p class="card-text">Optimize your website for search engines and improve your online visibility.</p>
+                    <button class="btn btn-primary" onclick="selectService('SEO Management')">Request Callback</button>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="card-icon">
+                    <span class="service-icon">3</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">App Development</h3>
+                    <p class="card-text">Custom app development services to meet your business needs.</p>
+                    <button class="btn btn-primary" onclick="selectService('App Development')">Request Callback</button>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="card-icon">
+                    <span class="service-icon">4</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Store Management</h3>
+                    <p class="card-text">Comprehensive store management solutions for your ecommerce business.</p>
+                    <button class="btn btn-primary" onclick="selectService('Store Management')">Request Callback</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 Appithub. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
